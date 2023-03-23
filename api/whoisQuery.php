@@ -79,6 +79,6 @@ if(!socket_connect($sock, $addr, 43)) {
 }
 $req = $domain."\r\n";
 socket_write($sock, $req, strlen($req));
-$buf = socket_read($sock, 2048);
+$buf = socket_read($sock, 12288);
 socket_close($sock);
 echo $buf."\n";
