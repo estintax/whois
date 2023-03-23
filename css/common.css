@@ -1,0 +1,22 @@
+/*
+    Copyright (c) 2023 Maksim Pinigin
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: black;
+    color: #bdc3c7;
+}
+
+#query {
+    width: 15%;
+}
+
+#result {
+    font-family: 'Source Code Pro', monospace;
+    margin-top: 1%;
+    font-size: small;
+}
