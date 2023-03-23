@@ -42,7 +42,12 @@ if(!isset($tld_cache[$matches[2]]) || isset($tld_cache[$matches[2]]) && time()-$
     }
     $req = $matches[2]."\r\n";
     socket_write($sock, $req, strlen($req));
-    $buf = socket_read($sock, 2048);
+    $buf = '';
+    while (true) {
+        $data = socket_read($sock, 12288);
+        if($data) $buf .= $data;
+        else break;
+    }
     socket_close($sock);
     $tld_matches = [];
     if(!preg_match("/whois:\s+([A-Za-z0-9\._-]+)/", $buf, $tld_matches)) {
