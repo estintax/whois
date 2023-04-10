@@ -31,7 +31,7 @@ const queryDomain = () => {
                     $("#result").html("Error connecting to TLD whois server");
                     break;
                 default:
-                    $("#result").html(data.replaceAll("\n", "<br>").replaceAll("@", "(аt)"));
+                    $("#result").html(data.replaceAll("\n", "<br>"));
                     $("#query").val("");
             }
         }

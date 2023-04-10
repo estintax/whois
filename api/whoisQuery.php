@@ -91,4 +91,4 @@ while (true) {
     else break;
 }
 socket_close($sock);
-echo $buf."\n";
+echo str_replace("@", "(аt)", $buf)."\n";
