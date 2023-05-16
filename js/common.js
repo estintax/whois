@@ -34,6 +34,9 @@ const queryDomain = () => {
                     $("#result").html(data.replaceAll("\n", "<br>"));
                     $("#query").val("");
             }
+        },
+        error: function () {
+            $("#result").html("Failed to call method. Check your internet connection!");
         }
     });
 };
